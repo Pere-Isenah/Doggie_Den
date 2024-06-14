@@ -1,36 +1,57 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDog } from '@fortawesome/free-solid-svg-icons';
+import { FaDog } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 
 export const Nav = () =>{
+const MobileNav = <>
+				<div>
+				<ul>
+					<Link>
+					<li>Home</li>
+					</Link>
+					<Link>
+					<li>Breeds</li>
+					</Link>
+					<Link>
+					<li>Services</li>
+					</Link>
+					<Link>
+					<li>About Us</li>
+					</Link>
+					<Link>
+					<li>Contact Us</li>
+					</Link>
+				</ul>
+			</div>
+			</>
   return (
-	<nav className="" >
-	<div className="container-fluid ">
-	  <a className="navbar-brand fs-2 h1" href="#"><FontAwesomeIcon icon={faDog} className=""/>Doggie Den</a>
-	  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span className="navbar-toggler-icon"></span>
-	  </button>
-	  <div className="collapse navbar-collapse" id="navbarNav">
-		<ul className="navbar-nav">
-		  <li className="nav-item me-3">
-			<a className="nav-link active" aria-current="page" href="#">Home</a>
-		  </li>
-		  <li className="nav-item me-3">
-			<a className="nav-link" href="#breeds">Breeds</a>
-		  </li>
-		  <li className="nav-item me-3">
-			<a className="nav-link" href="#">Services</a>
-		  </li>
-		  <li className="nav-item me-3">
-			<a className="nav-link" href="#">About Us</a>
-		  </li>
-		  <li className="nav-item me-3">
-			<a className="nav-link" href="#">Contact Us</a>
-		  </li>
-		</ul>
-	  </div>
-	</div>
-  </nav>
+		<div className="grid grid-cols-3 text-center">
+			<div className="flex gap-1 cols-span-1">
+				<span className="text-3xl">
+					<FaDog />
+				</span>
+				<h1 className="text-3xl font-bold">Doggie Den</h1>
+			</div>
+			<div className="col-span-2">
+				<ul className="flex  gap-5 text-lg font-bold">
+					<Link>
+					<li>Home</li>
+					</Link>
+					<Link>
+					<li>Breeds</li>
+					</Link>
+					<Link>
+					<li>Services</li>
+					</Link>
+					<Link>
+					<li>About Us</li>
+					</Link>
+					<Link>
+					<li>Contact Us</li>
+					</Link>
+				</ul>
+			</div>
+		</div>
     )
 };
