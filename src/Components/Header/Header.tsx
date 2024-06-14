@@ -4,7 +4,7 @@ import Hero from "./Hero"
 
 const Header = () => {
   return (
-    <div>
+    <div className="font-oswald">
     <Nav />
     <Hero />
     </div>

@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     fontFamily:{
-      
-    }
+      oswald:["Oswald", "sans-serif"]
+    },
     extend: {},
   },
   plugins: [],

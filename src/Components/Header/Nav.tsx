@@ -26,7 +26,7 @@ const MobileNav = <>
 			</div>
 			</>
   return (
-		<div className="grid grid-cols-3 text-center">
+		<div className="grid grid-cols-3 text-center p-3">
 			<div className="flex gap-1 cols-span-1">
 				<span className="text-3xl">
 					<FaDog />
