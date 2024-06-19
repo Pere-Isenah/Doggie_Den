@@ -1,57 +1,70 @@
-import React from "react";
+import React,{useState} from "react";
 import { FaDog } from "react-icons/fa6";
 import { Link } from "react-scroll";
+import { IoMdMenu } from "react-icons/io";
+import { IoCloseSharp } from "react-icons/io5";
 
 
 export const Nav = () =>{
-const MobileNav = <>
-				<div>
+  const [click,setClick] =  useState(false);
+  
+  const handleClick = () => {
+    setClick(!click)
+  }
+const MobileNav =(
+				<div className="absolute z-20 top-14 right-8 text-center bg-black bg-opacity-20 p-3 ">
 				<ul>
 					<Link>
-					<li>Home</li>
+					<li className="p-1">Home</li>
 					</Link>
 					<Link>
-					<li>Breeds</li>
+					<li className="p-1">Breeds</li>
 					</Link>
 					<Link>
-					<li>Services</li>
+					<li className="p-1">Services</li>
 					</Link>
 					<Link>
-					<li>About Us</li>
+					<li className="p-1">About Us</li>
 					</Link>
 					<Link>
-					<li>Contact Us</li>
+					<li className="p-1">Contact Us</li>
 					</Link>
 				</ul>
 			</div>
-			</>
+			);
   return (
-		<div className="grid grid-cols-3 text-center p-3">
+		<div className="grid grid-cols-3 text-center p-3 text-white w-full absolute z-20">
 			<div className="flex gap-1 cols-span-1">
-				<span className="text-3xl">
+				<span className="text-base md:text-3xl">
 					<FaDog />
 				</span>
-				<h1 className="text-3xl font-bold">Doggie Den</h1>
+				<h1 className="text-lg md:text-3xl font-bold">Doggie Den</h1>
 			</div>
-			<div className="col-span-2">
-				<ul className="flex  gap-5 text-lg font-bold">
+			<div className="col-span-2 hidden md:block">
+				<ul className="flex  gap-5  md:text-lg">
 					<Link>
-					<li>Home</li>
+					<li className="hover:font-bold cursor-pointer">Home</li>
 					</Link>
 					<Link>
-					<li>Breeds</li>
+					<li className="hover:font-bold cursor-pointer">Breeds</li>
 					</Link>
 					<Link>
-					<li>Services</li>
+					<li className="hover:font-bold cursor-pointer">Services</li>
 					</Link>
 					<Link>
-					<li>About Us</li>
+					<li className="hover:font-bold cursor-pointer">About Us</li>
 					</Link>
 					<Link>
-					<li>Contact Us</li>
+					<li className="hover:font-bold cursor-pointer">Contact Us</li>
 					</Link>
 				</ul>
 			</div>
+			<div className="text-white ">
+			  {click&&MobileNav}
+			</div>
+			<button className="col-span-1 pl-16 md:hidden" onClick={handleClick}>
+			  {click ? <IoCloseSharp />:<IoMdMenu />}
+			</button>
 		</div>
     )
 };
