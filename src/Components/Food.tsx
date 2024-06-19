@@ -11,7 +11,7 @@ const Food = () => {
       <p>Size</p>
       <p>{food.size}</p>
       <p>Description</p>
-      <p>{food.descriptions}</p>
+      <p>{food.description}</p>
       <p>Ingredient</p>
       <p>{food.ingredient}</p>
       <button className="bg-primary-brown p-3 rounded-md text-white">Buy</button>
