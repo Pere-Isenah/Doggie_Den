@@ -45,3 +45,5 @@ export const dogFoodDetails : DogFoodDetail[]= [
   {foodname: "Booster Sport", image:boosterSport,size: "15kg", type:"Sport", description: "pet cool junior is a complete and balanced dog food diet for juniors from 6 weeks. it meets all everyday nutritional needs for puppies health and provides all the vitamin and minerals necessary for optimal growth",
    ingredient: "Chicken meal, Peans, Rice, Animal fat, Dried beet pulp, Fish meal, Chicken Digest(liquid), carrot, Egg Product, Spinach, Vitamin and Mineral premix",  },
 ]
+
+export const DogHero : DogHero[]
