@@ -9,26 +9,26 @@ const ContactUs = () => {
   return (
     <div className="text-center bg-primary-green p-3">
       <h2 className="text-3xl font-bold">Contact Us</h2>
-      <div className="grid grid-cols-2">
-        <div className="col-span-1">
+      <div className="grid place-items-center">
+        <div className="grid place-items-center">
           <img src={ContactUsPic} alt="ContactUs" />
         </div>
-        <div className="col-span-1 grid grid-rows-4 gap-0">
-          <div className="flex items-center mt-2">
-            <FaInstagram />
-            <p className="pl-2">Doggie_Den</p>
+        <div className="grid grid-cols-4 gap-0 w-9/12 pb-5 place-content-center">
+          <div className="sm:colspan-1">
+            <span className='inline-block text-2xl pr-2 text-center'><FaInstagram /></span>
+            <p className="inline-block text-2xl font-bold">Doggie_Den</p>
           </div>
-          <div className="flex items-center mt-2">
-            <MdMailOutline />
-            <p className="pl-2">Doggieden@gmail.com</p>
+          <div className="col-span-1">
+          <span className='inline-block text-2xl'><MdMailOutline /></span>
+            <p className="inline-block text-2xl font-bold">Doggieden@gmail.com</p>
           </div>
-          <div className="flex items-center mt-2">
-            <FaTiktok />
-            <p className="pl-2">DoggieDen</p>
+          <div className="col-span-1">
+          <span className='inline-block text-2xl'><FaTiktok /></span>
+            <p className="inline-block text-2xl font-bold">DoggieDen</p>
           </div>
-          <div className="flex items-center mt-2">
-            <FaWhatsapp />
-            <p className="pl-2">+11 0153638493</p>
+          <div className="col-span-1">
+          <span className='inline-block text-2xl'><FaWhatsapp /></span>
+            <p className="inline-block text-2xl font-bold">+11 0153638493</p>
           </div>
         </div>
       </div>

@@ -46,4 +46,3 @@ export const dogFoodDetails : DogFoodDetail[]= [
    ingredient: "Chicken meal, Peans, Rice, Animal fat, Dried beet pulp, Fish meal, Chicken Digest(liquid), carrot, Egg Product, Spinach, Vitamin and Mineral premix",  },
 ]
 
-export const DogHero : DogHero[]
