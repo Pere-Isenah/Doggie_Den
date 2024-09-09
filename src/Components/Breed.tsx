@@ -1,5 +1,6 @@
 import React from 'react'
 import {dogDetails} from "./BreedData"
+import { Link } from '@tanstack/react-router'
 
 const Breed = () => {
   return (
@@ -10,7 +11,7 @@ const Breed = () => {
     <div className="bg-white w-10/12 md:w-96 h-[480px] flex flex-col items-center rounded-lg p-5 pb-5"key={index} id={breed.name}>
     <img className="h-80 md:h-80 md:w-60"src={breed.image}/>
     <h2 className="text-xl font-bold p-3">{breed.name}</h2>
-    <button className="bg-primary-brown p-3 rounded-md text-white hover:bg-primary-black">Know More</button>
+    <button className="bg-primary-brown p-3 rounded-md text-white hover:bg-primary-black"> <Link to={`/breeds/${breed.name}`}>Know More</Link></button>
     </div>
     ))}
     </div>

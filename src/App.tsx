@@ -1,11 +1,19 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { RouterProvider, createRouter } from '@tanstack/react-router'
+import "./index.css"
+// Import the generated route tree
+import { routeTree } from './routeTree.gen'
 
-export const Route = createRootRoute({
-  component: () => (
-    <>
-      <Outlet />
-      <TanStackRouterDevtools />
-    </>
-  ),
-})
+// Create a new router instance
+const router = createRouter({ routeTree })
+
+// Register the router instance for type safety
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router
+  }
+}
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+export default App;

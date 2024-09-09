@@ -1,5 +1,4 @@
-import { Link, Outlet, createFileRoute } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { Link, createFileRoute } from '@tanstack/react-router';
 
 import Header from './../Components/Header/Header'
 import Breed from './../Components/Breed'
@@ -10,13 +9,8 @@ import AboutUs from './../Components/AboutUs'
 import ContactUs from "./../Components/ContactUs"
 import {Element} from "react-scroll"
 
-
-export const Route = createFileRoute('/Home')({
-  component: Home,
-})
-  
-  function Home() { 
-    return (
+export const Route = createFileRoute('/')({
+  component: () =>
     <>
     <div>
       <Header/>
@@ -40,5 +34,4 @@ export const Route = createFileRoute('/Home')({
       </Element>
     </div>
     </>
-  )
-  }
+  })
