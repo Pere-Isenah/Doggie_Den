@@ -1,30 +1,94 @@
-# React + TypeScript + Vite
+# 🐕 Doggie Den
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for dog lovers to explore different dog breeds and premium dog food options. Built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Breed Explorer**: Detailed information about various dog breeds
+- **Interactive Cards**: Animated cards with breed details and images
+- **Premium Dog Food**: Catalog of high-quality dog food products
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Smooth Animations**: GSAP-powered animations for enhanced user experience
 
-## Expanding the ESLint configuration
+## 🚀 Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- Vite
+- TanStack Router
+- GSAP (GreenSock Animation Platform)
+- Tailwind CSS
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/doggie-den.git
+cd doggie-den
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+## 🧱 Project Structure
+
+```
+doggie-den/
+├── src/
+│   ├── components/
+│   │   ├── Breed.tsx
+│   │   └── Food.tsx
+│   ├── routes/
+│   │   └── breeds/
+│   ├── hooks/
+│   │   └── useCardAnimation.ts
+│   └── App.tsx
+├── public/
+└── package.json
+```
+
+## 🎨 Features in Detail
+
+### Breed Explorer
+- Interactive breed cards with hover animations
+- Detailed information about each breed
+- High-quality images and descriptions
+
+### Food Section
+- Premium dog food catalog
+- Expandable cards with nutritional information
+- Smooth animations and transitions
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔧 Development
+
+```bash
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+For detailed documentation about the technologies used:
+- [React Documentation](https://react.dev)
+- [Vite Documentation](https://vitejs.dev)
+- [GSAP Documentation](https://greensock.com/docs/)
+- [TanStack Router Documentation](https://tanstack.com/router)

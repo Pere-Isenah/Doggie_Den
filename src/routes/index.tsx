@@ -7,6 +7,7 @@ import Food from './../Components/Food'
 import Vet from './../Components/Vet'
 import AboutUs from './../Components/AboutUs'
 import ContactUs from "./../Components/ContactUs"
+import Footer from "./../Components/Footer"
 import {Element} from "react-scroll"
 
 export const Route = createFileRoute('/')({
@@ -31,6 +32,9 @@ export const Route = createFileRoute('/')({
       </Element>
       <Element name="ContactUs">
       <ContactUs />
+      </Element>
+      <Element name="Footer">
+      <Footer />
       </Element>
     </div>
     </>

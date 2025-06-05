@@ -2,6 +2,7 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 import "./index.css"
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
+import Footer from './Components/Footer';
 
 // Create a new router instance
 const router = createRouter({ routeTree })
@@ -14,6 +15,10 @@ declare module '@tanstack/react-router' {
 }
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 export default App;
