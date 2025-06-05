@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import { FaDog } from "react-icons/fa6";
 import { Link } from "react-scroll";
 import { IoMdMenu } from "react-icons/io";
@@ -15,7 +15,7 @@ export const Nav = () =>{
 const MobileNav =(
 				<div className="absolute z-20 top-14 right-8 text-center bg-black bg-opacity-20 p-3 ">
 				<ul>
-					<Link >
+					<Link to="Home" spy={true} smooth={true} offset={50} duration={500}>
 					<li className="p-1">Home</li>
 					</Link>
 					<Link to="Breeds" spy={true} smooth={true} offset={50} duration={500}>
@@ -43,7 +43,7 @@ const MobileNav =(
 			</div>
 			<div className="col-span-2 hidden md:block">
 				<ul className="flex  gap-5  md:text-lg">
-					<Link>
+					<Link to="Home" spy={true} smooth={true} offset={50} duration={500}>
 					<li className="hover:font-bold cursor-pointer">Home</li>
 					</Link>
 					<Link to="Breeds" spy={true} smooth={true} offset={50} duration={500}>

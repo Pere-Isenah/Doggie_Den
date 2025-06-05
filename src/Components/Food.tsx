@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { dogFoodDetails } from "./BreedData";
 import { FaStar, FaDog, FaWeight, FaChartPie } from 'react-icons/fa';
-import { IoMdInformation } from 'react-icons/io';
 import { GiMeat, GiWeightScale } from 'react-icons/gi';
 import { MdOutlineScience, MdExpandMore } from 'react-icons/md';
 import { TbMeat } from 'react-icons/tb';

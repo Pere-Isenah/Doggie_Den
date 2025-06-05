@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import ContactUsPic from "../assets/Images/contactUsPic.png";
 import { FaInstagram } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
@@ -20,9 +20,9 @@ const ContactUs = () => {
       // Animate left column items
       const leftItems = gsap.utils.toArray('.left-animate');
       leftItems.forEach((item) => {
-        gsap.from(item, {
+        gsap.from(item as HTMLElement, {
           scrollTrigger: {
-            trigger: item,
+            trigger: item as Element,
             start: "top bottom-=100",
             toggleActions: "play none none reverse"
           },

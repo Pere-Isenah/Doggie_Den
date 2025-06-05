@@ -30,12 +30,6 @@ function BreedPage() {
 
   useScrollToTop();
 
-  const hoverAnimation = {
-    scale: 1.05,
-    duration: 0.3,
-    ease: "power2.out"
-  };
-
   // Add refs for elements we want to animate
   const mainContentRef = useRef(null);
   const titleRef = useRef(null);
@@ -45,7 +39,6 @@ function BreedPage() {
   const aboutSectionRef = useRef(null);
   const careSectionRef = useRef(null);
   const careCardsRef = useRef(null);
-  const footerSectionsRef = useRef(null); // Add this with your other refs
   const footerContainerRef = useRef(null); // Add this ref with your other refs
   const backArrowRef = useRef(null); // Add with other refs
 
@@ -125,10 +118,9 @@ function BreedPage() {
         }
       ];
 
-      scrollAnimations.forEach(({ trigger, elements, from, to }) => {
+      scrollAnimations.forEach(({ elements, from, to }) => {
         ScrollTrigger.batch(elements, {
           start: "top 90%", // Adjust this value to trigger the animation sooner
-          trigger: trigger,
           onEnter: batch => gsap.fromTo(batch, from, to)
         });
       });

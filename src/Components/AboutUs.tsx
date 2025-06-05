@@ -1,4 +1,3 @@
-import React from 'react'
 import AboutUsPic from "../assets/Images/aboutUs.jpeg"
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 

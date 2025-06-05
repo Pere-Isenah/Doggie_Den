@@ -1,4 +1,3 @@
-import React from 'react'
 import {dogDetails} from "./BreedData"
 import { Link } from '@tanstack/react-router'
 import { useCardAnimation } from '../hooks/useCardAnimation';
@@ -18,7 +17,7 @@ const Breed = () => {
           >
             <img 
               className="h-80 md:h-80 md:w-60" 
-              src={breed.image} 
+              src={Array.isArray(breed.image) ? breed.image[0] : breed.image} 
               alt={breed.name}
             />
             <h2 className="text-xl font-bold p-3">{breed.name}</h2>

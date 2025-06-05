@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaPrint, FaPhone } from 'react-icons/fa';
 import { BsCreditCard2Front } from 'react-icons/bs';
 import { SiGooglepay } from 'react-icons/si';

@@ -1,4 +1,4 @@
-import { Link, createFileRoute } from '@tanstack/react-router';
+import { createFileRoute } from '@tanstack/react-router';
 
 import Header from './../Components/Header/Header'
 import Breed from './../Components/Breed'

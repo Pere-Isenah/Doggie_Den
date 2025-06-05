@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-scroll';
 import VetPic from "../assets/Images/vet.jpg";
 import { FaPlus, FaShieldAlt, FaSyringe, FaAmbulance } from 'react-icons/fa';
