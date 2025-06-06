@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import grommerPic from "../assets/Images/grommer.jpg"
+import grommerPic from "../assets/Images/grommer.webp"
 import { FaCertificate, FaHeart } from 'react-icons/fa';
 import { MdVerified } from 'react-icons/md';
 import { PiPawPrintFill } from 'react-icons/pi';

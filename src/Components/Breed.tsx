@@ -6,7 +6,7 @@ const Breed = () => {
   useCardAnimation();
   
   return (
-    <div className="bg-primary-brown h-[115rem] p-4 md:h-[48rem] grid grid-cols-1 content-center">
+    <div className="bg-primary-brown min-h-screen p-4 grid grid-cols-1 content-center overflow-x-hidden">
       <h2 className="text-4xl font-bold text-center p-3 pb-10">Our Breeds</h2>
       <div className="flex flex-col md:flex-row justify-center items-center text-center gap-12">
         {dogDetails.map((breed, index) => (

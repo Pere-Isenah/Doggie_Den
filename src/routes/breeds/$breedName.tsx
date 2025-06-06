@@ -196,36 +196,36 @@ function BreedPage() {
       </Link>
     </div>
         {breed && (
-          <div ref={mainContentRef} className="max-w-7xl relative h-full mx-auto grid md:grid-cols-2 gap-2">
+            <div ref={mainContentRef} className="max-w-7xl relative h-full mx-auto grid md:grid-cols-2 gap-2 md:pb-0 pb-6">
             {/* Image Carousel */}
-            <div ref={carouselRef} className="relative h-[600px] overflow-hidden rounded-lg">
+            <div ref={carouselRef} className="relative h-[300px] md:h-[600px] overflow-hidden rounded-lg">
               {images.map((img, index) => (
-                <img
-                  key={index}
-                  ref={el => el && (imagesRef.current[index] = el)}
-                  src={img}
-                  alt={`${breed.name} ${index + 1}`}
-                  className="absolute top-0 left-0 w-full h-full object-cover"
-                />
+              <img
+                key={index}
+                ref={el => el && (imagesRef.current[index] = el)}
+                src={img}
+                alt={`${breed.name} ${index + 1}`}
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              />
               ))}
             </div>
 
             {/* Content Section */}
-            <div className="space-y-8">
+            <div className="space-y-8 md:pl-0 pl-4">
               {/* Title and Description */}
-              <div ref={titleRef}>
-                <h1 className="text-4xl font-bold mb-4 text-white">{breed.name}</h1>
-              </div>
+                <div ref={titleRef}>
+                <h1 className="text-4xl font-bold mb-4 text-white md:text-left text-center">{breed.name}</h1>
+                </div>
 
               {/* Location and Group Tags */}
-              <div ref={tagsRef} className="flex gap-4">
+                <div ref={tagsRef} className="flex gap-4 md:justify-start justify-center">
                 <span className="bg-primary-dark-brown text-white px-4 py-2 rounded-full text-sm font-medium info-card">
                   Tibet
                 </span>
                 <span className="bg-primary-dark-brown text-white px-4 py-2 rounded-full text-sm font-medium info-card">
                   {breed.Group}
                 </span>
-              </div>
+                </div>
 
               {/* Info Cards Grid */}
               <div ref={infoCardsRef} className="grid grid-cols-2 gap-4">
@@ -269,7 +269,8 @@ function BreedPage() {
 
               {/* Breed Characteristics */}
               <div ref={characteristicsRef} className="h-full">
-                <h2 className="text-2xl font-bold mb-4 text-white">Breed Characteristics</h2>
+                <h2 className="text-2xl font-bold mb-4 text-white md:text-left text-center">Breed Characteristics</h2>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-4">
                   {breed.characteristics?.slice(0, 6).map((characteristic, idx) => (
                     <div
@@ -351,66 +352,66 @@ function BreedPage() {
       <div ref={footerContainerRef} className="footer-container w-full bg-primary-dark-brown">
         <footer className="text-white py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {/* About Section */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold">About Us</h3>
-                <p className="text-sm text-gray-300">Doggie Den is your trusted partner in finding and caring for your perfect canine companion. We specialize in premium dog breeds and expert care services.</p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* About Section */}
+          <div className="space-y-4 text-center md:text-left">
+            <h3 className="text-xl font-bold">About Us</h3>
+            <p className="text-sm text-gray-300">Doggie Den is your trusted partner in finding and caring for your perfect canine companion. We specialize in premium dog breeds and expert care services.</p>
+          </div>
 
-              {/* Quick Links */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-gray-300 hover:text-white">
-                    <FaArrowRight className="text-xs" />
-                    <a href="/">Home</a>
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-300 hover:text-white">
-                    <FaArrowRight className="text's" />
-                    <a href="#breeds">Our Breeds</a>
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-300 hover:text-white">
-                    <FaArrowRight className="text-xs" />
-                    <a href="#services">Services</a>
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-300 hover:text-white">
-                    <FaArrowRight className="text-xs" />
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
+          {/* Quick Links */}
+          <div className="space-y-4 text-center md:text-left">
+            <h3 className="text-xl font-bold">Quick Links</h3>
+            <ul className="space-y-2">
+          <li className="flex items-center gap-2 text-gray-300 hover:text-white justify-center md:justify-start">
+            <FaArrowRight className="text-xs" />
+            <a href="/">Home</a>
+          </li>
+          <li className="flex items-center gap-2 text-gray-300 hover:text-white justify-center md:justify-start">
+            <FaArrowRight className="text's" />
+            <a href="#breeds">Our Breeds</a>
+          </li>
+          <li className="flex items-center gap-2 text-gray-300 hover:text-white justify-center md:justify-start">
+            <FaArrowRight className="text-xs" />
+            <a href="#services">Services</a>
+          </li>
+          <li className="flex items-center gap-2 text-gray-300 hover:text-white justify-center md:justify-start">
+            <FaArrowRight className="text-xs" />
+            <a href="#contact">Contact</a>
+          </li>
+            </ul>
+          </div>
 
-              {/* Contact Info */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold">Contact Info</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>123 Pet Street</p>
-                  <p>Dogtown, DG 12345</p>
-                  <p>Phone: (123) 456-7890</p>
-                  <p>Email: info@doggieden.com</p>
-                </div>
-              </div>
-
-              {/* Follow Us */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold">Follow Us</h3>
-                <div className="flex gap-4">
-                  <a href="#" className="hover:text-secondary-light-brown">
-                    <FaFacebook size={24} />
-                  </a>
-                  <a href="#" className="hover:text-secondary-light-brown">
-                    <FaTwitter size={24} />
-                  </a>
-                  <a href="#" className="hover:text-secondary-light-brown">
-                    <FaInstagram size={24} />
-                  </a>
-                  <a href="#" className="hover:text-secondary-light-brown">
-                    <FaPinterest size={24} />
-                  </a>
-                </div>
-              </div>
+          {/* Contact Info */}
+          <div className="space-y-4 text-center md:text-left">
+            <h3 className="text-xl font-bold">Contact Info</h3>
+            <div className="space-y-2 text-gray-300">
+          <p>123 Pet Street</p>
+          <p>Dogtown, DG 12345</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@doggieden.com</p>
             </div>
+          </div>
+
+          {/* Follow Us */}
+          <div className="space-y-4 text-center md:text-left">
+            <h3 className="text-xl font-bold">Follow Us</h3>
+            <div className="flex gap-4 justify-center md:justify-start">
+          <a href="#" className="hover:text-secondary-light-brown">
+            <FaFacebook size={24} />
+          </a>
+          <a href="#" className="hover:text-secondary-light-brown">
+            <FaTwitter size={24} />
+          </a>
+          <a href="#" className="hover:text-secondary-light-brown">
+            <FaInstagram size={24} />
+          </a>
+          <a href="#" className="hover:text-secondary-light-brown">
+            <FaPinterest size={24} />
+          </a>
+            </div>
+          </div>
+        </div>
           </div>
         </footer>
       </div>

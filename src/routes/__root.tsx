@@ -3,9 +3,9 @@ import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 
 export const Route = createRootRoute({
   component: () => (
-    <>
+    <div className="overflow-x-hidden">
       <Outlet />
-      <TanStackRouterDevtools />
-    </>
+      {import.meta.env.DEV && <TanStackRouterDevtools />}
+    </div>
 )
 })

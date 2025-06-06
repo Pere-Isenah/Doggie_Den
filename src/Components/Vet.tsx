@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import VetPic from "../assets/Images/vet.jpg";
+import VetPic from "../assets/Images/vet.webp";
 import { FaPlus, FaShieldAlt, FaSyringe, FaAmbulance } from 'react-icons/fa';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 

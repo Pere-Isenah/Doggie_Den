@@ -1,16 +1,16 @@
-import lhasaImage from "../assets/Images/LhasaApso2.png";
-import pugImage from "../assets/Images/pug2.png";
-import boerboel from "../assets/Images/boerboel2.png";
-import optimaxPup from "../assets/Images/optimax-puppy.png";
-import optimaxWhole from "../assets/Images/optimax-wholesome.png";
-import boosterPup from "../assets/Images/booster-puppy.png";
-import boosterSport from "../assets/Images/booster-sport.png";
-import lhasa3 from "../assets/Images/lhasa3.png"
-import lhasa4 from "../assets/Images/lhasa4.png"
-import pug3 from "../assets/Images/pug3.png"
-import pug4 from "../assets/Images/pug4.png"
-import bor1 from "../assets/Images/bor1.png"
-import bor2 from "../assets/Images/bor2.png"
+import lhasaImage from "../assets/Images/LhasaApso2.webp";
+import pugImage from "../assets/Images/pug2.webp";
+import boerboel from "../assets/Images/boerboel.webp";
+import optimaxPup from "../assets/Images/optimax-puppy.webp";
+import optimaxWhole from "../assets/Images/optimax-wholesome.webp";
+import boosterPup from "../assets/Images/booster-puppy.webp";
+import boosterSport from "../assets/Images/booster-sport.webp";
+import lhasa3 from "../assets/Images/lhasa3.webp"
+import lhasa4 from "../assets/Images/lhasa4.webp"
+import pug3 from "../assets/Images/pug3.webp"
+import pug4 from "../assets/Images/pug4.webp"
+import bor1 from "../assets/Images/bor1.webp"
+import bor2 from "../assets/Images/bor2.webp"
 
 
 interface DogDetail {
