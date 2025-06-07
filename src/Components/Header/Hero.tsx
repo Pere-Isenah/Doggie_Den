@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Herovideo from "../../assets/HeroVideo.mp4"
+import Herovideo from "../../assets/HeroVideo.webm"
 
 function Hero() {
   const containerRef = useRef(null);
