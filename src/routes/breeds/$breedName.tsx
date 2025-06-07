@@ -10,10 +10,11 @@ import { ImScissors } from "react-icons/im";
 import { PiPersonArmsSpreadFill } from "react-icons/pi";
 import { FaInstagram, FaFacebook, FaTwitter, FaPinterest, FaArrowRight } from 'react-icons/fa';
 import { useImageCarousel } from '../../hooks/useImageCarousel';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Link } from '@tanstack/react-router';
+import Spinner from '../../Components/Spinner';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -41,6 +42,18 @@ function BreedPage() {
   const careCardsRef = useRef(null);
   const footerContainerRef = useRef(null); // Add this ref with your other refs
   const backArrowRef = useRef(null); // Add with other refs
+
+  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>(new Array(images.length).fill(false));
+
+  const handleImageLoad = (index: number) => {
+    setImagesLoaded(prev => {
+      const newState = [...prev];
+      newState[index] = true;
+      return newState;
+    });
+  };
+
+  const allImagesLoaded = imagesLoaded.every(Boolean);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -198,14 +211,18 @@ function BreedPage() {
         {breed && (
             <div ref={mainContentRef} className="max-w-7xl relative h-full mx-auto grid md:grid-cols-2 gap-2 md:pb-0 pb-6">
             {/* Image Carousel */}
-            <div ref={carouselRef} className="relative h-[300px] md:h-[600px] overflow-hidden rounded-lg">
+            <div ref={carouselRef} className="relative h-[300px] md:h-[600px] overflow-hidden ">
+              {!allImagesLoaded && <Spinner />}
               {images.map((img, index) => (
               <img
                 key={index}
                 ref={el => el && (imagesRef.current[index] = el)}
                 src={img}
                 alt={`${breed.name} ${index + 1}`}
-                className="absolute top-0 left-0 w-full h-full object-cover"
+                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
+                  imagesLoaded[index] ? 'opacity-100' : 'opacity-0'
+                }`}
+                onLoad={() => handleImageLoad(index)}
               />
               ))}
             </div>
