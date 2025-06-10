@@ -2,6 +2,8 @@
 
 A modern web application for dog lovers to explore different dog breeds and premium dog food options. Built with React, TypeScript, and Vite.
 
+🌐 **[Live Demo](http://doggieden.netlify.app/)**
+
 ## ✨ Features
 
 - **Breed Explorer**: Detailed information about various dog breeds
